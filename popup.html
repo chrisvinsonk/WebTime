@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Time Tracker</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 240px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(45deg, #00b0ff, #ffffff);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 30px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #000;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    #timer {
+      margin: 20px 0;
+      font-size: 48px;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      animation: glowing 2s infinite;
+      text-shadow: 0 0 8px rgba(0, 176, 255, 0.8), 0 0 12px rgba(0, 176, 255, 0.6), 0 0 16px rgba(0, 176, 255, 0.4);
+    }
+
+    #subtext {
+      font-style: italic;
+      color: #000;
+      margin-top: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    #tabName {
+      font-size: 18px;
+      color: #000;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    #buttonContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    #takeABreakButton {
+      width: 180px;
+      height: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.6);
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #takeABreakButton:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes glowing {
+      0% {
+        opacity: 0.8;
+        text-shadow: none;
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 14px rgba(0, 176, 255, 0.8), 0 0 20px rgba(0, 176, 255, 0.6), 0 0 26px rgba(0, 176, 255, 0.4);
+      }
+      100% {
+        opacity: 0.8;
+        text-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>WebTime Tracker</h2>
+    <div id="tabName" title="">Tab Name:</div>
+    <div id="timer">00:00:00</div>
+    <div id="buttonContainer">
+        <button id="takeABreakButton">Take a Break</button>
+    </div>
+    <div id="subtext">Developed by: Chris Vinson</div>
+    
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

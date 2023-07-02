@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Website Time Tracker",
+    "version": "1.0",
+    "description": "Tracks the time spent on a website",
+    "permissions": [
+      "tabs",
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Website Time Tracker"
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
